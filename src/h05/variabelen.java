@@ -31,7 +31,7 @@ public class variabelen extends Applet {
 
     public void paint(Graphics g) {
         //teken rechthoek
-        /*g.drawRect(0,40,breedte,hoogte);
+        g.drawRect(0,40,breedte,hoogte);
         g.drawString("Rechthoek",20,105);
 
         //teken lijn
@@ -62,7 +62,7 @@ public class variabelen extends Applet {
         //Taartpunt met ovaal eromheen
         g.drawOval(240,40,breedte,hoogte);
         g.setColor(opvulkleur);
-        g.fillArc(240,40,100,50,0,45);*/
+        g.fillArc(240,40,100,50,0,45);
 
         g.drawString("100",10,10);
         g.drawString("80",10,30);
