@@ -1,12 +1,14 @@
 package h02;
-import java.awt.*;
-import java.applet.*;
+        import java.awt.*;
+        import java.applet.*;
 
 
-public class applet extends Applet {
+public class opdracht2 extends Applet {
     public void init() {
 
         setBackground(Color.white);
+
+
     }
 
     public void paint(Graphics g) {
@@ -15,6 +17,7 @@ public class applet extends Applet {
         g.drawString(" Melih ", 50, 60);
         g.setColor(Color.red);
         g.drawString(" Redzhebov ", 50, 80);
+
     }
 
 
