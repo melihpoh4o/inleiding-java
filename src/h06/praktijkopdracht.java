@@ -19,6 +19,7 @@ public class praktijkopdracht extends Applet {
 
 
 
+
         cijfer1=5.9;
         cijfer2=6.3;
         cijfer3=6.9;
