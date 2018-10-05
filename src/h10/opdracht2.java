@@ -7,11 +7,15 @@ public class opdracht2 extends Applet {
     TextField Tekstvak;
     Label label;
     String s, tekst;
-    int inputgetal;
     int hoogstegetal;
+    int laagstegetal;
+
 
 
     public void init() {
+
+        laagstegetal=Integer.MAX_VALUE;
+        hoogstegetal=Integer.MIN_VALUE;
         Tekstvak = new TextField("", 5);
         Tekstvak.addActionListener(new TekstvakListener());
         tekst = "";
@@ -24,21 +28,25 @@ public class opdracht2 extends Applet {
 
 
     public void paint(Graphics g) {
-        g.drawString(" Hoogste getal " + hoogstegetal, 50, 55);
-        g.drawString("Laagste getal" + inputgetal, 50, 75);
+        if (hoogstegetal> Integer.MIN_VALUE){
+            g.drawString(" Hoogste getal " + hoogstegetal, 50, 55);
+            g.drawString("Laagste getal" + laagstegetal, 50, 75);
+        }
+
     }
 
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             String s = Tekstvak.getText();
-            if (inputgetal > hoogstegetal) {
-                hoogstegetal = inputgetal;
-            } else {
-                inputgetal = hoogstegetal;
-
+            int invoer=Integer.parseInt(s);
+            if (invoer > hoogstegetal) {
+                hoogstegetal = invoer;
+            }
+            if (invoer < laagstegetal){
+                laagstegetal  =invoer;
             }
             repaint();
-            inputgetal = Integer.parseInt(s);
+
 
         }
     }

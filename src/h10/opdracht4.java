@@ -15,10 +15,11 @@ public class opdracht4 extends  Applet {
     int dag;
     int Februari;
 
+
     public void init() {
         tekstvak = new TextField("", 50);
-        Tekstvak=new TextField("",50);
-        label=new Label("Typ een maand een druk enter");
+        Tekstvak = new TextField("", 50);
+        label = new Label("Typ een maand een druk enter");
         tekstvak.addActionListener(new TekstvakListener());
         Tekstvak.addActionListener(new TekstvakListener1());
         label1 = new Label("Type een jaar en druk op enter  ");
@@ -29,14 +30,16 @@ public class opdracht4 extends  Applet {
         add(label);
         add(label1);
         s = "";
-        Februari=29;
+        Februari = 29;
 
     }
 
     public void paint(Graphics g) {
         g.drawString(tekst, 50, 120);
         g.drawString(Tekst, 50, 120);
+
     }
+
 
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -47,7 +50,7 @@ public class opdracht4 extends  Applet {
                     tekst = "Januari 31 dagen";
                     break;
                 case 2:
-                    tekst = "Februari" + Februari +"dagen";
+                    tekst = "Februari" + Februari + "dagen";
                     break;
                 case 3:
                     tekst = "Maart 31 dagen";
@@ -79,10 +82,13 @@ public class opdracht4 extends  Applet {
                 case 12:
                     tekst = "December 31 dagen";
                     break;
+
+
             }
-            repaint();
+
         }
     }
+
 
     class TekstvakListener1 implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -103,4 +109,6 @@ public class opdracht4 extends  Applet {
 
     }
 }
+
+
 

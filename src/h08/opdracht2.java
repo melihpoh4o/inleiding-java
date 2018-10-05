@@ -54,9 +54,6 @@ public class opdracht2 extends Applet {
              repaint();
 
 
-
-
-
         }
     }
 

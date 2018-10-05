@@ -55,8 +55,6 @@ public class Praktijkopdracht extends Applet {
             getal1=Double.parseDouble( s );
             repaint();
 
-
-
         }
     }
 
