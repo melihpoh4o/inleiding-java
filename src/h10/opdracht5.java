@@ -19,25 +19,22 @@ public class opdracht5 extends Applet {
         tekstvak = new TextField("", 5);
         tekstvak.addActionListener(new TekstvakListener());
         label = new Label("Type een cijfer druk op enter  ");
-        knop=new Button(" * ");
+        knop = new Button(" * ");
         knop.addActionListener(new KnopListener());
         s = "";
         tekst = "";
         tekst1 = "";
-        cijfer1=5.5;
+        cijfer1 = 5.5;
         add(tekstvak);
         add(label);
         add(knop);
-
-
 
 
     }
 
     public void paint(Graphics g) {
         g.drawString(tekst, 50, 150);
-        g.drawString(tekst1,50,200);
-
+        g.drawString(tekst1, 50, 200);
 
 
     }
@@ -45,12 +42,11 @@ public class opdracht5 extends Applet {
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             s = tekstvak.getText();
-            cijfer = Double.parseDouble( s );
-            if (cijfer>cijfer1){
-                tekst = ""+ "voldoende" ;
-            }
-            else {
-                tekst = ""+ "onvoldoende";
+            cijfer = Double.parseDouble(s);
+            if (cijfer > cijfer1) {
+                tekst = "" + "voldoende";
+            } else {
+                tekst = "" + "onvoldoende";
             }
             repaint();
 
@@ -63,15 +59,12 @@ public class opdracht5 extends Applet {
             inputgetal = Double.parseDouble(s);
             if (inputgetal > cijfer1)
                 tekst1 = "geslaagd";
-        else{
-            tekst1="gezakt";
+            else{
+                tekst1="gezakt";
             }repaint();
 
-            }
         }
 
 
     }
-
-
-
+}
